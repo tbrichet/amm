@@ -46,7 +46,7 @@ body {
   /* Overlay */
   .sb-overlay{
     position:fixed; inset:0;
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.7);
     opacity:0; pointer-events:none;
     transition:opacity .2s ease;
     z-index:1000;
@@ -133,7 +133,9 @@ body.is-open .toggler {
 .hero-box {
     background-color: rgba(135, 43, 58, 0.3) !important;
     width: 40%;
-    max-height: 50vh;
+    min-width: 600px;
+    box-sizing: border-box;
+    height: 50vh;
     text-align: center;
     padding: 20px;
     position: absolute;
@@ -144,11 +146,18 @@ body.is-open .toggler {
 h1 {
     font-family: 'The Seasons';
     font-size: 5rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    
 }
 
 h3 {
     font-size: 1.3rem;
     padding: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .cta-hero-button {
