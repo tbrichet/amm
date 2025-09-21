@@ -105,11 +105,25 @@ body.is-open .toggler {
 /* HERO */
 
 .hero {
-    background-image: url('img/ammhero.png');
+    /* background-image: url('img/ammhero.png'); */
     height: 100vh;
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: 75% 100%;
+    /* background-position: right top;
+    background-repeat: no-repeat; */
+    /* background-size: 75% 100%; */
+    /* background-size: 75% auto; */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/ammhero.png") center/cover no-repeat;
+  width: 75%;     /* 75% width of container */
+  height: 100%;
+  right: 0;
+  left: auto;
 }
 
 .amm-logo {
@@ -119,7 +133,7 @@ body.is-open .toggler {
 .hero-box {
     background-color: rgba(135, 43, 58, 0.3) !important;
     width: 40%;
-    height: 50vh;
+    max-height: 50vh;
     text-align: center;
     padding: 20px;
     position: absolute;
