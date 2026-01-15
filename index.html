@@ -26,10 +26,10 @@
   <nav>
     <a href="#">About Us</a>
     <a href="#">Our Mixologists</a>
-    <a href="#">Pricing</a>
+    <!-- <a href="#">Pricing</a> -->
     <a href="#">Themes</a>
-    <a href="#">FAQ</a>
-    <a href="#">Book Now!</a>
+    <!-- <a href="#">FAQ</a> -->
+    <a href="#">Request a Quote</a>
   </nav>
 </aside>
     <!-- HERO -->
@@ -41,6 +41,178 @@
             <button class="cta-hero-button">Book Now</button>
         </div>
     </section>
+
+     <!--About Us-->
+    <section class="about">
+      <h2 class="about-header">About Us</h2>
+      <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h3 class="blue-header">Arizona Mobile Mixologists</h3>
+              <div class="about-text">
+                <p>Let us handle all of the bar details so that you can enjoy your guests and your event!</p>
+                <p>Our mobile bars can be set up indoors or outdoors, making our services ideal for custom events.</p>
+                <p>We offer foolproof beverage menus to guarantee that your guests are going to have a good time! We can also customize your drink selection to accommodate your event’s theme and/or guests’ preferences.</p>
+                <p>Hosting a bar is personal! It’s a great way to add a unique element to your event while adding a focal point to encourage social interactions among your guests.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-5">
+              <img src="img/robert2.png" class="about-img">
+            </div>
+    
+          </div>
+        </div>
+    </section>
+
+    <!--MEET OUR MIXOLOGISTS-->
+    <section class="meet-section">
+      <h2 class="meet-header"> Meet Our Mixologists</h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="img/gio.png">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="img/jovan.png">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="img/robert.png">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="img/sabrina.png">
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- THEMES -->
+     <section class="themes-section">
+    
+
+        <div class="carousel-container">
+        <h2 class="themes-header">Party Themes We Love</h2>
+        
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" onclick="slideCarousel(-1)">‹</button>
+            <button class="carousel-btn next" onclick="slideCarousel(1)">›</button>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-item-custom">
+                    <div class="card-custom">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=280&fit=crop" alt="Saloon Sips">
+                    </div>
+                    <h3 class="card-title-custom">Saloon Sips</h3>
+                    <!-- <p class="card-subtitle-custom">Old Fashioned, Dirty Shirley, Mule Drinks</p> -->
+                     <p class="card-subtitle-custom">Simple country fun! This bar experience features Bourbons, Beers, Peach Tea and our homemade ginger ale. Perfect for any occasion of all ages. We bring the yee and the haw!</p>
+                </div>
+
+                <div class="carousel-item-custom">
+                    <div class="card-custom classic">
+                        <img src="img/classic-theme.jpg" alt="Classic Cocktails">
+                    </div>
+                    <h3 class="card-title-custom">Classic Elegance</h3>
+                    <p class="card-subtitle-custom">Sophisticated and light. This party is perfect if your goal is to enjoy a low key event with elegant conversations. </p>
+                </div>
+
+                <div class="carousel-item-custom">
+                    <div class="card-custom">
+                        <img src="img/island-theme.jpg" alt="Island Fusion">
+                    </div>
+                    <h3 class="card-title-custom">Island Vibes</h3>
+                    <p class="card-subtitle-custom">Tropical elegance or whimsical vibes. This party can take on a life of its own. This event is always festive and fun . We promise to keep the rum and the laughs flowing! </p>
+                </div>
+
+                <div class="carousel-item-custom">
+                    <div class="card-custom">
+                        <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&h=280&fit=crop" alt="Tropical Paradise">
+                    </div>
+                    <h3 class="card-title-custom">Garden Party</h3>
+                    <p class="card-subtitle-custom">This party is fashionable, fun, fruity and herbal. Perfect for afternoon showers and morning brunches. This event promises an emphasis on soft and luxurious cocktails. </p>
+                </div>
+
+                <div class="carousel-item-custom">
+                    <div class="card-custom">
+                        <img src="https://images.unsplash.com/photo-1632987790465-2634b43c4289?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fiesta Flows">
+                    </div>
+                    <h3 class="card-title-custom">Fiesta Flows</h3>
+                    <p class="card-subtitle-custom">If a party was to throw a party.. this would be the party! Double down on lots of Tequila, vibrant cocktails and authentic cantaritos . This party will wow your guests! </p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+     </section>
+
+     <section class="quote-form-section">
+          <div class="form-container">
+            <h2 class="themes-header">Request a Quote</h2>
+            <p class="subtitle">Let us craft the perfect cocktail experience for your special occasion</p>
+            
+            <div class="form-card">
+                <form id="eventForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="row-custom">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email <span class="required">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone <span class="required">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required placeholder="(555) 123-4567">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="eventDate" class="form-label">Event Date <span class="required">*</span></label>
+                        <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+                    </div>
+
+                    <div class="row-custom">
+                        <div class="form-group">
+                            <label for="startTime" class="form-label">Estimated Start Time <span class="required">*</span></label>
+                            <input type="time" class="form-control" id="startTime" name="startTime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endTime" class="form-label">Estimated End Time <span class="required">*</span></label>
+                            <input type="time" class="form-control" id="endTime" name="endTime" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location" class="form-label">Event Location <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="location" name="location" required placeholder="Venue name or address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests" class="form-label">Number of Guests <span class="required">*</span></label>
+                        <select class="form-select" id="guests" name="guests" required>
+                            <option value="">Select number of guests</option>
+                            <option value="1-25">1-25 guests</option>
+                            <option value="26-50">26-50 guests</option>
+                            <option value="51-100">51-100 guests</option>
+                            <option value="101-200">101-200 guests</option>
+                            <option value="201+">201+ guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments" class="form-label">Additional Comments</label>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Tell us about your event, cocktail preferences, dietary restrictions, or any special requests..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+     </section>
+      
+
 
     
     <script src="script.js"></script>

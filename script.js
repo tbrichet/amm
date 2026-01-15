@@ -66,3 +66,64 @@
       if (a) close();
     });
   })();
+
+  // Carousel
+
+  let currentIndex = 0;
+        const track = document.getElementById('carouselTrack');
+        const items = document.querySelectorAll('.carousel-item-custom');
+        const totalItems = items.length;
+
+        function getItemsPerView() {
+            if (window.innerWidth <= 576) return 1;
+            if (window.innerWidth <= 992) return 2;
+            return 3;
+        }
+
+        function slideCarousel(direction) {
+            const itemsPerView = getItemsPerView();
+            const maxIndex = totalItems - itemsPerView;
+            
+            currentIndex += direction;
+            
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            } else if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+            
+            const itemWidth = items[0].offsetWidth;
+            const gap = 20;
+            const offset = -(currentIndex * (itemWidth + gap));
+            
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
+        window.addEventListener('resize', () => {
+            const itemsPerView = getItemsPerView();
+            const maxIndex = totalItems - itemsPerView;
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+                slideCarousel(0);
+            }
+        });
+
+
+// Quote Form Validation
+    const today = new Date().toISOString().split('T')[0];
+        document.getElementById('eventDate').setAttribute('min', today);
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            console.log('Form submitted with data:', data);
+            
+            // Show success message
+            alert('Thank you for your inquiry! We will contact you shortly to discuss your event details.');
+            
+            // Reset form
+            event.target.reset();
+        }
